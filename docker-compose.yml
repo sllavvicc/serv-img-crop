@@ -6,6 +6,9 @@ services:
         image: serv_img_crop:latest
         container_name: serv_img_crop
         restart: always
+        volumes:
+            - C:\images_docker\uploaded_images:/usr/src/app/uploads/images/original
+            - C:\images_docker\uploaded_images_thumbs:/usr/src/app/uploads/images/thumbs
         ports:
             - 3000:3000
         networks:
