@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    serv_img_crop:
+        build: .
+        image: serv_img_crop:latest
+        container_name: serv_img_crop
+        restart: always
+        ports:
+            - 3000:3000
+        networks:
+            - serv_img_crop
+
+networks:
+    serv_img_crop:
+        driver: bridge

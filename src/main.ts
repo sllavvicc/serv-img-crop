@@ -30,7 +30,3 @@ if (cluster.isMaster) {
     .catch(error => Logger.error(error))
     .then(() => Logger.log('Cluster work on port: 3000'));
 }
-
-// bootstrap()
-//   .catch(error => Logger.error(error))
-//   .then(() => Logger.log('Service work on port: 3000'));
