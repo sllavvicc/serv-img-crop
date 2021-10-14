@@ -7,13 +7,20 @@ services:
         container_name: serv_img_crop
         restart: always
         volumes:
-            - C:\images_docker\uploaded_images:/usr/src/app/uploads/images/original
-            - C:\images_docker\uploaded_images_thumbs:/usr/src/app/uploads/images/thumbs
+            - original:/usr/src/app/uploads/images/original
+            - thumbs:/usr/src/app/uploads/images/thumbs
         ports:
-            - 3000:3000
-        networks:
-            - serv_img_crop
-
-networks:
-    serv_img_crop:
-        driver: bridge
+            - 127.0.0.1:3000:3000
+volumes:
+  original:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /uploads/images/original
+  thumbs:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /uploads/images/thumbs
