@@ -28,7 +28,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.5.4",
-    "sharp": "^0.25.4",
+    "sharp": "^0.30.5",
     "tsconfig-paths": "^3.9.0"
   },
   "devDependencies": {
